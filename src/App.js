@@ -4,6 +4,14 @@ import {Container, Typography} from '@material-ui/core';
 import 'fontsource-roboto';
 
 class App extends Component {
+
+    // constructor(props){
+    //     super(props);
+    //     this.state = {
+    //         resultado: []
+    //     }
+    // }
+
     render(){
         return (
             <Container maxWidth="sm" component="article">
@@ -14,12 +22,14 @@ class App extends Component {
                     Formulario de cadastro
                 </Typography>
                 <FormularioCadastro aoEnviar={aoEnviarForm} validarCPF={validarCPF} />
+                {/* Resultado: {aoEnviarForm} */}
             </Container>
         );
     }
 }
 
 function aoEnviarForm(dados){
+    // return this.setState({resultado: dados});
     console.log(dados);
 }
 
